@@ -34,7 +34,7 @@ const Post = sequelize.define('post', {
     updatedAt: {
         type: 'TIMESTAMP',
         allowNull: true,
-        defaultValue: null,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
     },
 }, {
     tableName: 'posts',
